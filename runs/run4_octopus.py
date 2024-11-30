@@ -1,6 +1,6 @@
 from pybricks.parameters import Stop
 
-def increase_drive_settings(robot, RobotConfig, increment=30):
+def decreese_drive_settings(robot, RobotConfig, increment=-20):
     straight_speed = RobotConfig.STRAIGHT_SPEED + increment
     straight_accel = RobotConfig.STRAIGHT_ACCEL + increment
     turn_rate = RobotConfig.TURN_RATE + increment
@@ -20,11 +20,12 @@ def restore_default_settings(robot):
 
 
 def run4_octopus(robot, RobotConfig):
-    increase_drive_settings(robot, RobotConfig)
-    robot.curve(100, -46)
+    decreese_drive_settings(robot, RobotConfig)
+    robot.curve(130, -46)
     robot.gyro_drive(550)
-    robot.gyro_drive(-550)
-
+    robot.gyro_drive(-400)
+    robot.gyro_turn_absolute(-30)
+    robot.gyro_drive(-400)
     restore_default_settings(robot)
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig
