@@ -1,3 +1,4 @@
+
 from pybricks.parameters import Stop
 
 def increase_drive_settings(robot, RobotConfig, increment=60):
@@ -22,15 +23,22 @@ def restore_default_settings(robot):
 def run3_traverse(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
     robot.curve(860, 65)
-    robot.gyro_turn_absolute(96)
-    robot.gyro_drive(350)
+    robot.gyro_turn_absolute(98)
+    robot.gyro_drive(300)
     robot.gyro_drive(-230)
-    robot.gyro_drive(40)
-    robot.gyro_turn_absolute(70)
-    robot.curve(1100, 35)
-    robot.curve(460, 60)
-    robot.gyro_drive(250)
-    restore_default_settings(robot)
+    robot.gyro_drive(200)
+    robot.gyro_turn_absolute(96)
+    robot.gyro_drive(490)
+    robot.gyro_turn_absolute(65)
+    robot.gyro_drive(240)
+    robot.gyro_drive(-240)
+    robot.gyro_turn_absolute(170)
+    robot.gyro_drive(-50)
+    robot.gyro_turn_absolute(190)
+    robot.gyro_drive(200)
+    robot.gyro_turn_absolute(110)
+    robot.gyro_drive(300)
+
 
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig

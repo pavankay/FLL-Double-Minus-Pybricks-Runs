@@ -23,7 +23,7 @@ def main():
 
     while True:
         # Show menu with numeric options: 0, 1, 2, 3, 4, 5
-        selected = hub_menu("0", "1", "2", "3", "4", "5", "6")
+        selected = hub_menu("0", "1", "2", "3", "4", "5", "6", "7")
 
         if selected == "0":
             # Run 0: Left Collecting

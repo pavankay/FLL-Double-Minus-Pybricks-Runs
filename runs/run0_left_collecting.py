@@ -1,7 +1,6 @@
 
 
-
-def increase_drive_settings(robot, RobotConfig, increment=60):
+def increase_drive_settings(robot, RobotConfig, increment=120):
     straight_speed = RobotConfig.STRAIGHT_SPEED + increment
     straight_accel = RobotConfig.STRAIGHT_ACCEL + increment
     turn_rate = RobotConfig.TURN_RATE + increment
@@ -22,16 +21,14 @@ def restore_default_settings(robot):
 
 def run0_left_collecting(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
-
-    try:
-        robot.curve(360, 25)
-        robot.gyro_drive(600)
-        robot.wait_for_millis(200)
-        robot.gyro_drive(-300)
-        robot.gyro_drive(-500)
-
-    finally:
-        restore_default_settings(robot)
+    robot.curve(360, 24)
+    robot.gyro_drive(650)
+    robot.wait_for_millis(200)
+    robot._drive_base.use_gyro(True)
+    robot.gyro_drive(-450)
+    robot.gyro_turn_absolute(90)
+    robot.gyro_drive(-350)
+    restore_default_settings(robot)
 
 
 if __name__ == "__main__":

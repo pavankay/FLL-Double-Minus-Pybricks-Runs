@@ -20,26 +20,24 @@ def restore_default_settings(robot):
 
 
 def run7_krill_dumper(robot, RobotConfig):
-    # increase_drive_settings(robot, RobotConfig)
-    # robot.curve(600, -50)
-    # robot.curve(120, 87)
-    # robot.update_settings(
-    #     robot._drive_base,
-    #     straight_speed=100,
-    #     straight_acceleration=200,
-    #     turn_rate=RobotConfig.TURN_RATE,
-    #     turn_acceleration=RobotConfig.TURN_ACCEL
-    # )
-    # restore_default_settings(robot)
-    # robot.gyro_drive(400)
-    # robot.wait_for_millis(400)
-    # robot.gyro_drive(-100)
-    # robot.gyro_drive(100)
-    # robot.gyro_drive(-100)
-    # robot.curve(-400, 90)
+    increase_drive_settings(robot, RobotConfig)
+    robot.curve(600, -50)
+    robot.curve(120, 87)
+    robot.update_settings(
+        robot._drive_base,
+        straight_speed=100,
+        straight_acceleration=200,
+        turn_rate=RobotConfig.TURN_RATE,
+        turn_acceleration=RobotConfig.TURN_ACCEL
+    )
+    restore_default_settings(robot)
+    robot.gyro_drive(400)
+    robot.wait_for_millis(400)
+    robot.gyro_drive(-100)
+    robot.gyro_drive(100)
+    robot.gyro_drive(-100)
+    robot.curve(-400, 90)
     robot.gyro_drive(-400)
-    #robot.gyro_turn_absolute(60)
-
     restore_default_settings(robot)
 
 if __name__ == "__main__":

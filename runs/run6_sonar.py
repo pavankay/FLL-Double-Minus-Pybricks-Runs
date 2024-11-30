@@ -21,13 +21,16 @@ def restore_default_settings(robot):
 
 def run6_sonar(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
-    robot.curve(680, -68)
+    robot.curve(680, -66)
     robot.gyro_turn_absolute(0)
     robot.gyro_drive(100)
-    robot.rotate_motor_degrees(-800, 200)
+    robot.rotate_motor_degrees(-900, 200)
     robot.curve(-140, 50)
-    robot.gyro_drive(-200)
-    robot.curve(-800, -48)
+    robot.gyro_drive(-320)
+    robot.gyro_turn_absolute(-10)
+    robot.gyro_drive(-600)
+
+    robot._drive_base.stop()
 
     restore_default_settings(robot)
 if __name__ == "__main__":
