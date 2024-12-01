@@ -1,4 +1,4 @@
-
+from pybricks.parameters import Stop
 
 def increase_drive_settings(robot, RobotConfig, increment=120):
     straight_speed = RobotConfig.STRAIGHT_SPEED + increment
@@ -20,17 +20,16 @@ def restore_default_settings(robot):
 
 
 def run0_left_collecting(robot, RobotConfig):
-    increase_drive_settings(robot, RobotConfig)
+    # increase_drive_settings(robot, RobotConfig)
     robot.curve(360, 24)
-    robot.gyro_drive(650)
+    robot.gyro_drive(500)
     robot.wait_for_millis(200)
-    robot._drive_base.use_gyro(True)
-    robot.gyro_drive(-450)
-    robot.gyro_turn_absolute(90)
+    robot.rotate_motor_degrees(-120, 200,wait=Stop.HOLD)
     robot.gyro_drive(-350)
-    restore_default_settings(robot)
-
-
+    robot.gyro_turn_absolute(80)
+    robot.gyro_drive(-350)
+    # restore_default_settings(robot)
+    # robot.curve(-360, -24)
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig
 
