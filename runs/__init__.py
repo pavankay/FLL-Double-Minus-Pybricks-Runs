@@ -6,3 +6,4 @@ from runs.run4_octopus import run4_octopus
 from runs.run5_krill_kollecter import run5_krill_kollecter
 from runs.run6_sonar import run6_sonar
 from runs.run7_krill_dumper import run7_krill_dumper
+from runs.run3_5_boat_dropoff import run3_5_boat_dropoff
