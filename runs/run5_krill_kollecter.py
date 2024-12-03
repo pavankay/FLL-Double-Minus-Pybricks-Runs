@@ -27,17 +27,17 @@ def run5_krill_kollecter(robot, RobotConfig):
 
     robot.update_settings(
         robot._drive_base,
-        straight_speed=600,
-        straight_acceleration=600,
+        straight_speed=800,
+        straight_acceleration=800,
         turn_rate=150,
         turn_acceleration=360
     )
 
     robot.gyro_drive(150)
     robot._set_default_settings()
-
-    robot.gyro_drive(-155)
-    robot.curve(-400, 70)
+    robot.gyro_drive(-180)
+    robot.gyro_turn_absolute(-30)
+    robot.gyro_drive(-800)
     # robot.curve(3500, -35)
     # robot.gyro_drive(150)
     # robot.curve(325, 45)
