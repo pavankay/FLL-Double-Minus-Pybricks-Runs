@@ -11,7 +11,7 @@ def main():
 
     while True:
         # Show menu with numeric options: 0, 1, 2, 3, 4, 5
-        selected = hub_menu("0", "1", "2", "3", "4", "5", "6", "7", "8")
+        selected = hub_menu("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
 
         if selected == "0":
             # Run 0: Left Collecting
@@ -49,6 +49,8 @@ def main():
             # Placeholder for future run or functionality
             run7_krill_dumper(robot, config)
             print("Run 8: Krill dumped")
+        elif selected == "9":
+            run8_coral_move(robot, config)
         # Add a small delay between runs
         wait(400)
 
