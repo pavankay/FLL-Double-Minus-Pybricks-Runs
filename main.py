@@ -1,4 +1,4 @@
-from pybricks.hubs import PrimeHub
+
 from pybricks.tools import hub_menu, wait
 
 
@@ -8,7 +8,6 @@ from utils.base_robot import BaseRobot, RobotConfig
 
 
 def main():
-    hub = PrimeHub()
     robot = BaseRobot()
     config = RobotConfig()
 
@@ -38,6 +37,7 @@ def main():
             print("Run 4: Octopus completed")
         elif selected == "5":
             # Placeholder for future run or functionality
+            run5_krill_kollecter(robot, config)
             print("Run 5: Placeholder - Not implemented")
         elif selected == "6":
             # Placeholder for future run or functionality
