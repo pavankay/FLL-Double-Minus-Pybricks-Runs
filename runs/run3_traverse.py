@@ -22,7 +22,7 @@ def restore_default_settings(robot):
 
 def run3_traverse(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
-    robot.gyro_drive(3000)
+    robot.gyro_drive(1900)
     robot._drive_base.stop()
 
 

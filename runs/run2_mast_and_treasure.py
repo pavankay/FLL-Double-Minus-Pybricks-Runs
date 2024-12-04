@@ -21,7 +21,7 @@ def run2_mast_and_treasure(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
     robot.gyro_drive(235)
     robot.curve(300, 95)
-    robot.gyro_drive(100)
+    robot.gyro_drive(90)
     robot.wait_for_millis(100)
     robot.gyro_drive(-75)
     robot.curve(-200, 60)
