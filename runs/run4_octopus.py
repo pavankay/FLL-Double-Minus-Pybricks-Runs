@@ -26,6 +26,7 @@ def run4_octopus(robot, RobotConfig):
     robot.gyro_drive(-400)
     robot.gyro_turn_absolute(-30)
     robot.gyro_drive(-400)
+    robot._drive_base.stop()
     restore_default_settings(robot)
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig

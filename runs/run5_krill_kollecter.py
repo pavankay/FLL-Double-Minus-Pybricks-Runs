@@ -41,8 +41,7 @@ def run5_krill_kollecter(robot, RobotConfig):
     # robot.curve(3500, -35)
     # robot.gyro_drive(150)
     # robot.curve(325, 45)
-    # robot.gyro_drive(125)
-    robot._drive_base.stop()
+    # robot.gyro_drive(125)robot._drive_base.stop()
     restore_default_settings(robot)
 
 if __name__ == "__main__":

@@ -21,12 +21,13 @@ def restore_default_settings(robot):
 
 def run0_left_collecting(robot, RobotConfig):
     # increase_drive_settings(robot, RobotConfig)
-    robot.rotate_motor_degrees(120, 200,wait=Stop.HOLD)
+    robot.rotate_motor_degrees(120, 200, wait=False)
     robot.curve(360, 24)
-    robot.gyro_drive(550)
+    robot.gyro_drive(530)
     robot.wait_for_millis(200)
-    robot.rotate_motor_degrees(-170, 200,wait=Stop.HOLD)
+    robot.rotate_motor_degrees(-180, 200, wait=Stop.HOLD)
     robot.gyro_drive(-650)
+    robot._drive_base.stop()
     # restore_default_settings(robot)
     # robot.curve(-360, -24)
 if __name__ == "__main__":

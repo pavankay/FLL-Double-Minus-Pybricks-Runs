@@ -26,6 +26,7 @@ def run2_mast_and_treasure(robot, RobotConfig):
     robot.gyro_drive(-75)
     robot.curve(-200, 60)
     robot.gyro_drive(-475)
+    robot._drive_base.stop()
     restore_default_settings(robot)
 
 

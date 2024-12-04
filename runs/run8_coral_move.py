@@ -1,6 +1,6 @@
 
 
-def increase_drive_settings(robot, RobotConfig, increment=-200):
+def increase_drive_settings(robot, RobotConfig, increment=-300):
     straight_speed = RobotConfig.STRAIGHT_SPEED + increment
     straight_accel = RobotConfig.STRAIGHT_ACCEL + increment
     turn_rate = RobotConfig.TURN_RATE + increment
@@ -24,6 +24,7 @@ def run8_coral_move(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
     robot.gyro_drive(100)
     robot.gyro_drive(-100)
+    robot._drive_base.stop()
     restore_default_settings(robot)
 
 if __name__ == "__main__":

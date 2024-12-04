@@ -37,6 +37,7 @@ def run7_krill_dumper(robot, RobotConfig):
     robot.gyro_drive(-100)
     robot.curve(-250, 70)
     robot.gyro_drive(-650)
+    robot._drive_base.stop()
     restore_default_settings(robot)
 
 if __name__ == "__main__":

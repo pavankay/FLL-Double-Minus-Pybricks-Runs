@@ -29,7 +29,6 @@ def run6_sonar(robot, RobotConfig):
     robot.gyro_drive(-320)
     robot.gyro_turn_absolute(-10)
     robot.gyro_drive(-700)
-
     robot._drive_base.stop()
 
     restore_default_settings(robot)

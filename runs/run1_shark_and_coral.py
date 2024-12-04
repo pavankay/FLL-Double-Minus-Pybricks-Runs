@@ -27,7 +27,7 @@ def run1_shark_and_coral(robot, RobotConfig):
     robot.gyro_turn_absolute(-50)
     robot.gyro_drive(230)
     robot.curve(-410, -140)
-
+    robot._drive_base.stop()
     restore_default_settings(robot)
 
 

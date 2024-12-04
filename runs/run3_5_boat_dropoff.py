@@ -22,6 +22,7 @@ def run3_5_boat_dropoff(robot, RobotConfig):
     robot.gyro_drive(158)
     robot.wait_for_millis(100)
     robot.gyro_drive(-158)
+    robot._drive_base.stop()
     restore_default_settings(robot)
 
 
