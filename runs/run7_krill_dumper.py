@@ -23,14 +23,16 @@ def run7_krill_dumper(robot, RobotConfig):
     restore_default_settings(robot)
     increase_drive_settings(robot, RobotConfig)
     robot.curve(600, -48)
-    robot.curve(120, 91)
+    robot.curve(160, 91)
+    print("wider")
     robot.update_settings(
         robot._drive_base,
-        straight_speed=100,
-        straight_acceleration=200,
+        straight_speed=250,
+        straight_acceleration=400,
         turn_rate=RobotConfig.TURN_RATE,
         turn_acceleration=RobotConfig.TURN_ACCEL
     )
+    robot.wait_for_millis(100)
     robot.gyro_drive(400)
     robot.wait_for_millis(400)
     restore_default_settings(robot)
