@@ -21,8 +21,17 @@ def run2_mast_and_treasure(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
     robot.gyro_drive(235)
     robot.curve(300, 95)
+
+    robot.update_settings(
+        robot._drive_base,
+        straight_speed=150,
+        straight_acceleration=200,
+        turn_rate=RobotConfig.TURN_RATE,
+        turn_acceleration=RobotConfig.TURN_ACCEL
+    )
     robot.gyro_drive(90)
-    robot.wait_for_millis(100)
+    robot._set_default_settings()
+    robot.wait_for_millis(400)
     robot.gyro_drive(-75)
     robot.curve(-200, 60)
     robot.gyro_drive(-475)
