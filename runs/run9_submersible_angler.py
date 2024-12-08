@@ -1,6 +1,6 @@
 
 
-def increase_drive_settings(robot, RobotConfig, increment=-300):
+def increase_drive_settings(robot, RobotConfig, increment=10):
     straight_speed = RobotConfig.STRAIGHT_SPEED + increment
     straight_accel = RobotConfig.STRAIGHT_ACCEL + increment
     turn_rate = RobotConfig.TURN_RATE + increment
@@ -19,16 +19,12 @@ def restore_default_settings(robot):
     robot._set_default_settings()
 
 
-def run8_coral_move(robot, RobotConfig):
+def run9_submersible_angler(robot, RobotConfig):
     restore_default_settings(robot)
     increase_drive_settings(robot, RobotConfig)
-    robot.gyro_drive(50)
-    robot.gyro_drive(-50)
-    robot._drive_base.stop()
-    restore_default_settings(robot)
-
+    robot.curve(680, -68)
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig
 
     test_robot = BaseRobot()
-    run8_coral_move(test_robot, RobotConfig)
+    run9_submersible_angler(test_robot, RobotConfig)
