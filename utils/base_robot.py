@@ -37,7 +37,10 @@ class BaseRobot:
         )
 
         self.leftAttachmentMotor = Motor(Port.C)
-
+        try:
+            self.flooppyAttachmentMotor = Motor(Port.F)
+        except:
+            print("No right attachment motor found.")
 
         self._drive_base.use_gyro(True)
         self._set_default_settings()
@@ -109,7 +112,7 @@ class BaseRobot:
         print(f"Initial Heading: {initial_heading}")
 
         # Calculate the target heading
-        target_heading = angle + 2
+        target_heading = angle + 4
         print(f"Target Heading: {target_heading}")
 
         # Set custom speed settings if provided
@@ -176,16 +179,20 @@ class BaseRobot:
         final_heading = self._hub.imu.heading()
         heading_change = final_heading - initial_heading
 
-    def rotate_motor_degrees(self, angle, speed=200, then=Stop.BRAKE, wait=True):
+    def rotate_motor_degrees(self, angle, motor="Main", speed=200, then=Stop.BRAKE, wait=True):
         """
         Rotates the motor by a specified number of degrees.
         :param angle: Amount to rotate the motor by (in degrees).
+        :param motor: Motor to rotate.
         :param speed: Speed at which to rotate the motor.
         :param then: Action to take after rotation (default is Stop.BRAKE).
         :param wait: Whether to wait for the action to complete (default is True).
         """
         print(speed)
-        self.leftAttachmentMotor.run_angle(speed=speed, rotation_angle=angle, then=then, wait=wait)
+        if motor == "floopy":
+            self.flooppyAttachmentMotor.run_angle(speed=speed, rotation_angle=angle, then=then, wait=wait)
+        else:
+            self.leftAttachmentMotor.run_angle(speed=speed, rotation_angle=angle, then=then, wait=wait)
 
     def wait_for_button(self, button):
         """

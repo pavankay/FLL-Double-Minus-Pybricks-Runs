@@ -20,7 +20,7 @@ def restore_default_settings(robot):
 def run2_mast_and_treasure(robot, RobotConfig):
     increase_drive_settings(robot, RobotConfig)
     robot.gyro_drive(235)
-    robot.curve(300, 95)
+    robot.curve(320, 85)
 
     robot.update_settings(
         robot._drive_base,
@@ -29,7 +29,7 @@ def run2_mast_and_treasure(robot, RobotConfig):
         turn_rate=RobotConfig.TURN_RATE,
         turn_acceleration=RobotConfig.TURN_ACCEL
     )
-    robot.gyro_drive(90)
+    robot.gyro_drive(150)
     robot._set_default_settings()
     robot.wait_for_millis(400)
     robot.gyro_drive(-75)
