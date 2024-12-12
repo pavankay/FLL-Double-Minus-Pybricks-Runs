@@ -51,7 +51,7 @@ def main():
             print("Run 5: Krill dumped")
         elif selected == "6":
             run8_coral_move(robot, config)
-        elif selected == "9":
+        elif selected == "7":
             run9_submersible_angler(robot, config)
         # Add a small delay between runs
         wait(400)

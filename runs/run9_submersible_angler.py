@@ -22,7 +22,13 @@ def restore_default_settings(robot):
 def run9_submersible_angler(robot, RobotConfig):
     restore_default_settings(robot)
     increase_drive_settings(robot, RobotConfig)
-    robot.curve(680, -68)
+    robot.curve(680, -50)
+    robot.gyro_drive(650)
+    robot.gyro_drive(-100)
+    robot.curve(50, -67)
+    robot.gyro_drive(300)
+    robot.gyro_drive(-100)
+    robot._drive_base.stop()
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig
 
