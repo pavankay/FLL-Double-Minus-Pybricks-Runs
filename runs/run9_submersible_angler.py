@@ -25,7 +25,7 @@ def run9_submersible_angler(robot, RobotConfig):
     robot.curve(680, -50)
     robot.gyro_drive(650)
     robot.gyro_drive(-100)
-    robot.curve(50, -70)
+    robot.curve(50, -65)
     robot.gyro_drive(300)
     robot.gyro_drive(-100)
     robot._drive_base.stop()
