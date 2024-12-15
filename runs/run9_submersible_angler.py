@@ -28,6 +28,9 @@ def run9_submersible_angler(robot, RobotConfig):
     robot.curve(50, -65)
     robot.gyro_drive(300)
     robot.gyro_drive(-100)
+    robot.curve(50, -115)
+    robot.gyro_drive(25)
+
     robot._drive_base.stop()
 if __name__ == "__main__":
     from utils.base_robot import BaseRobot, RobotConfig
