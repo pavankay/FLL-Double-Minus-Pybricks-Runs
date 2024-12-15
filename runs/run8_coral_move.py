@@ -22,8 +22,8 @@ def restore_default_settings(robot):
 def run8_coral_move(robot, RobotConfig):
     restore_default_settings(robot)
     increase_drive_settings(robot, RobotConfig)
-    robot.gyro_drive(50)
-    robot.gyro_drive(-50)
+    robot.gyro_drive(70)
+    robot.gyro_drive(-70)
     robot._drive_base.stop()
     restore_default_settings(robot)
 

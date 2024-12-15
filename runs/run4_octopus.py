@@ -21,10 +21,7 @@ def restore_default_settings(robot):
 
 def run4_octopus(robot, RobotConfig):
     decreese_drive_settings(robot, RobotConfig)
-    robot.curve(130, -46)
-    robot.gyro_drive(550)
-    robot.gyro_drive(-400)
-    robot.gyro_turn_absolute(-30)
+    robot.gyro_drive(400)
     robot.gyro_drive(-400)
     robot._drive_base.stop()
     restore_default_settings(robot)

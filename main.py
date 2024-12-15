@@ -11,7 +11,7 @@ def main():
 
     while True:
         # Show menu with numeric options: 0, 1, 2, 3, 4, 5
-        selected = hub_menu("0", "1", "2", "3", "4", "5", "6", "7")
+        selected = hub_menu("0", "1", "2", "3", "4", "5", "6", "7", "8")
 
         if selected == "0":
             # Run 0: Left Collecting
@@ -41,6 +41,8 @@ def main():
         elif selected == "6":
             run8_coral_move(robot, config)
         elif selected == "7":
+            run4_octopus(robot, config)
+        elif selected == "8":
             run9_submersible_angler(robot, config)
         # Add a small delay between runs
         wait(400)
